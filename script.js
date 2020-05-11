@@ -68,8 +68,8 @@ submitBtn.addEventListener("click", (event) => {
       questionCategory.innerHTML = newQuiz.category;
       questionType.innerHTML = newQuiz.type;
       questionDifficulty.innerHTML = newQuiz.difficulty;
-      console.log(optionArray);
-      console.log(state.answer);
+      // console.log(optionArray);
+      // console.log(state.answer);
     });
     questionHeading.innerText = `Question ${state.questionNumber}`;
     state.name = inputName;
@@ -94,7 +94,7 @@ optionBtn.forEach((btn) => {
       if (state.questionArray.length == 0) {
         nextQuestionBtn.innerHTML = "Finish";
       }
-      console.log(e.target.innerHTML, e.target.innerText, e.target.textContent);
+      // console.log(e.target.innerHTML, e.target.innerText, e.target.textContent);
     } else {
       return;
     }
@@ -160,11 +160,11 @@ nextQuestionBtn.addEventListener("click", () => {
       questionDifficulty.innerHTML = newQuiz.difficulty;
       questionAttempted = !questionAttempted;
 
-      console.log("answer", state.answer);
-      console.log("question", newQuiz.question);
-      console.log("options", optionArray);
-      console.log("questionAttempted", questionAttempted);
-      console.log("questionArray length", state.questionArray.length);
+      // console.log("answer", state.answer);
+      // console.log("question", newQuiz.question);
+      // console.log("options", optionArray);
+      // console.log("questionAttempted", questionAttempted);
+      // console.log("questionArray length", state.questionArray.length);
     }
   }
 });
@@ -182,7 +182,7 @@ let displayformError = (message, className) => {
 const correctAnswer = (e) => {
   e.target.classList.add("correct");
   points += 1;
-  console.log(points);
+  // console.log(points);
 };
 
 const wrongAnswer = (e) => {
@@ -193,7 +193,7 @@ const wrongAnswer = (e) => {
       btn.classList.add("correct");
     }
   });
-  console.log(points);
+  // console.log(points);
 };
 
 mainQuestion.addEventListener('DOMNodeInserted', () => {
