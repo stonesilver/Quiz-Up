@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Score</title>
+      <link rel="stylesheet" href="score.css" />
+      <script
+         src="https://kit.fontawesome.com/04cf745c3d.js"
+         SameSite="None"
+         Secure
+         crossorigin="anonymous"
+      ></script>
+   </head>
+   <body>
+      <div id="particles-js">
+         <main>
+            <div id="icon">
+               <i class="fas fa-trophy"></i>
+               <h2 class="icon-text">Congratulations</h2>
+            </div>
+            <div id="quiz-details">
+               <div class="detail-tile">
+                  <p class="detail-header">Total Questions</p>
+                  <span class="detail-footer total-tile">10</span>
+               </div>
+               <div class="detail-tile">
+                  <p class="detail-header">Correctly Answered</p>
+                  <span class="detail-footer correct-tile">8</span>
+               </div>
+               <div class="detail-tile">
+                  <p class="detail-header">Wrongly Answered</p>
+                  <span class="detail-footer wrong-tile">2</span>
+               </div>
+               <div class="detail-tile">
+                  <p class="detail-header">Percentage</p>
+                  <span class="detail-footer percentage-tile">80</span>
+               </div>
+            </div>
+            <div id="nav-btn">
+               <button class="btn play-again">Play Again</button>
+               <button class="btn failed-questions">
+                  View Failed Questions
+               </button>
+            </div>
+         </main>
+         <div id="modal">
+            <div class="modal-nav">X</div>
+            <h2 class="modal-header">Failed Questions</h2>
+            <div class="failed-questions-modal"></div>
+         </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script src="score.js"></script>
+   </body>
+</html>

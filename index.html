@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/04cf745c3d.js" SameSite='None' Secure crossorigin="anonymous"></script>
   </head>
   <body id="home">
     <main class="main">
@@ -18,19 +15,7 @@
       </header>
       <section class="container">
         <div class="left" id="left">
-          <div class="quiz-start">
-            <p class="blur">Quiz in Progress</p>
-            <div class="animation-container">
-              <div class="animation"></div>
-            </div>
-            <button 
-              class="play-again btn-nav" 
-              onclick="window.location.href='index.html'"
-            >
-              Play Again
-            </button>
-          </div>
-          <h2 class="left-heading" id="left-heading">Create New Quiz</h2>
+          <h2 class="left-heading" id="left-heading"><i class="fas fa-book-reader"></i> Create New Quiz</h2>
           <form class="form">
             <input
               type="text"
@@ -42,12 +27,6 @@
             <select id="category" name="category">
               <option value="">Select Category</option>
               <option value="random">Random</option>
-              <option value="9">General Knowledge</option>
-              <option value="10">Entertainment: Books</option>
-              <option value="11">Entertainment: Film</option>
-              <option value='18': Computer">Science: Computer</option>
-              <option value="21">Sports</option>
-              <option value="26">Celebrities</option>
             </select>
 
             <select id="difficulty" name="difficulty">
@@ -65,62 +44,11 @@
               <option value="boolean">True / False</option>
             </select>
 
-            <input type="button" value="Let's do it" class="submit" />
+            <input type="button" 
+              value="Let's do this" 
+              class="submit"
+            />
           </form>
-        </div>
-        <div class="right">
-          <div class="display-score">
-            <h2></h2>
-            <p></p>
-          </div>
-          <div class="display-loading">
-            <h2>Loading</h2>
-            <div class="scaling-circle"></div>
-          </div>
-          <main class="main-quiz">
-            <header class="quiz-header">
-              <p class="user"></p>
-            </header>
-            <section class="test">
-              <div class="question">
-                <div class="top">
-                  <h4 class="question-heading"></h4>
-                  <progress
-                    max="100"
-                    value=""
-                    id="progress"
-                    class="progress"
-                  ></progress>
-                </div>
-                <div class="question-status">
-                  <div class="status question-category"></div>
-                  <div class="status question-difficulty"></div>
-                  <div class="status question-type"></div>
-                </div>
-                <div class="question-container">
-                  <p class="main-question"></p>
-                </div>
-                <div class="options-container">
-                  <button class="btn"></button>
-                  <button class="btn"></button>
-                  <button class="btn"></button>
-                  <button class="btn"></button>
-                </div>
-                <div class="nav-links">
-                  <button
-                    class="home btn-nav"
-                    onclick="window.location.href='index.html'"
-                  >
-                    Reset
-                  </button>
-                  <button class="btn-nav next">Next --&gtcir;</button>
-                </div>
-              </div>
-            </section>
-          </main>
-          <div class="description-text">
-            <p class="justify">Create a New Quiz and Quiz Up</p>
-          </div>
         </div>
       </section>
     </main>

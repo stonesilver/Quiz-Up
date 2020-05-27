@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Quiz Up</title>
+      <link rel="stylesheet" href="quiz.css" />
+      <script
+         src="https://kit.fontawesome.com/04cf745c3d.js"
+         SameSite="None"
+         Secure
+         crossorigin="anonymous"
+      ></script>
+   </head>
+   <body class="quiz">
+      <div class="loading">
+         <div class="spinning-loader"></div>
+      </div>
+      <main class="main-quiz">
+         <header class="quiz-header">
+            <h1>Test in Progress .....</h1>
+         </header>
+         <section class="test">
+            <p class="user"></p>
+            <div class="question">
+               <div class="top">
+                  <h4 class="question-heading">Loading...</h4>
+                  <div class="loader"></div>
+                  <progress max="100" value="10" class="progress"></progress>
+               </div>
+               <div class="question-status">
+                  <div class="status question-category">Loading...</div>
+                  <div class="status question-difficulty">Loading...</div>
+                  <div class="status question-type">Loading...</div>
+               </div>
+               <div class="question-container">
+                  <div class="main-question">
+                     Question loading.....
+                  </div>
+               </div>
+               <div class="options-container">
+                  <button class="btn">Loading...</button>
+                  <button class="btn">Loading...</button>
+                  <button class="btn">Loading...</button>
+                  <button class="btn">Loading...</button>
+               </div>
+               <div class="nav-links">
+                  <button class="home btn-nav">Home</button>
+                  <button class="btn-nav next">
+                     <i class="fas fa-arrow-right"></i>
+                  </button>
+               </div>
+            </div>
+         </section>
+         <div id="home-modal">
+            <div class="modal-content">
+               <span class="span-close">X</span>
+               <p class="modal-text">
+                  Click confirm to reset the quiz and all progress
+               </p>
+               <div class="modal-btn">
+                  <button class=" confirm">Confirm</button>
+                  <button class=" btn-close">Cancel</button>
+               </div>
+            </div>
+         </div>
+      </main>
+
+      <script src="./quiz.js"></script>
+   </body>
+</html>
