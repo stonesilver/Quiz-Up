@@ -52,12 +52,11 @@
    display: flex;
    position: relative;
    flex-direction: column;
-   justify-content: center;
    align-items: center;
    box-sizing: border-box;
    padding: 1rem;
    width: 100%;
-   min-height: 100vh;
+   min-height: 100%;
    background: var(--background-color);
 }
 
@@ -175,7 +174,8 @@
 
 .options-container {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   /* grid-template-columns: repeat(2, 1fr); */
    column-gap: 1.5rem;
    row-gap: 2rem;
    margin-bottom: 5%;
@@ -394,11 +394,10 @@
       font-size: 0.75rem;
       color: var(--text-color);
    }
-   .options-container {
-      display: grid;
+   /* .options-container {
       grid-template-columns: repeat(1, 1fr);
       row-gap: 0.8rem;
-   }
+   } */
    .status {
       font-size: 0.75rem;
       font-weight: 600;
