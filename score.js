@@ -119,9 +119,6 @@ const particles = {
     JSON.parse(localStorage.getItem('quizDetails')).failedQuestions.length == 0
  ) {
     document.querySelector('.failed-questions').style.display = 'none';
-    // document
-    //    .querySelector('#nav-btn')
-    //    .removeChild(document.querySelector('.failed-questions'));
     document.querySelector('#nav-btn').style.justifyContent = 'center';
  }
  

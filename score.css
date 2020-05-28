@@ -60,7 +60,7 @@ main {
 
 #quiz-details {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
    grid-gap: 1rem;
    width: 70%;
    justify-content: center;
@@ -101,7 +101,7 @@ main {
 
 #nav-btn {
    margin-top: 2.5rem;
-   width: 45%;
+   width: 50%;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
    grid-gap: 2rem;
@@ -202,14 +202,18 @@ i[class*='thumb'] {
    padding: 5px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
    .fa-trophy {
       font-size: 4rem;
    }
 
    .icon-text {
       font-size: 2rem;
-      color: var(--main-color);
-      letter-spacing: 1px;
+   }
+   #nav-btn {
+      margin: 2rem 0;
+      width: 95%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
    }
 }
