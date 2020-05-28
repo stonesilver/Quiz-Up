@@ -128,13 +128,11 @@ main {
    position: absolute;
    display: none;
    top: 5vh;
-   left: 10vw;
-   margin: 3rem 0;
+   left: 5vw;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   flex-wrap: wrap;
-   width: 80%;
+   width: 90%;
    background: linear-gradient(45deg, rgb(15, 199, 212), rgb(129, 39, 151));
    padding: 1rem;
    border-radius: 2px;
@@ -165,7 +163,7 @@ main {
 
 .failed-questions-modal {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
    grid-gap: 0.5rem;
    padding: 0.5rem;
 }
