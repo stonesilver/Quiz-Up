@@ -20,12 +20,13 @@
    flex-direction: column;
    align-items: center;
    width: 100%;
-   height: 100vh;
-   overflow: hidden;
+   height: 100%;
+   background: var(--background-color);
 }
 
 .loading {
    position: absolute;
+   top: 0;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -53,16 +54,16 @@
    position: relative;
    flex-direction: column;
    align-items: center;
+   justify-content: center;
    box-sizing: border-box;
-   padding: 1rem;
+   padding: 2rem 1rem;
    width: 100%;
-   min-height: 100%;
-   background: var(--background-color);
+   height: 100%;
 }
 
 .quiz-header {
    display: block;
-   margin-bottom: 5%;
+   margin-bottom: 0.5rem;
 }
 
 .user {
@@ -73,7 +74,6 @@
 }
 
 .test {
-   display: block;
    width: 70%;
    background: var(--primary-color);
    border-radius: 10px;
@@ -174,10 +174,9 @@
 
 .options-container {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-   /* grid-template-columns: repeat(2, 1fr); */
+   grid-template-columns: repeat(2, 1fr);
    column-gap: 1.5rem;
-   row-gap: 2rem;
+   row-gap: 1.5rem;
    margin-bottom: 5%;
 }
 
@@ -252,15 +251,16 @@
    display: none;
    justify-content: center;
    align-items: center;
-   background: transparent;
 }
 
 .modal-content {
-   width: 50%;
-   height: 40%;
+   position: fixed;
+   top: 10%;
+   width: auto;
+   height: auto;
    background: var(--text-color);
    border-radius: 5px;
-   padding: 0.1rem 0.5rem;
+   padding: 0.3rem 1rem 2rem;
 }
 
 .span-close {
@@ -369,20 +369,18 @@
 
 @keyframes disappear {
    0% {
-      top: 0;
+      opacity: 1;
+      z-index: 1;
    }
    100% {
-      top: 100vh;
+      opacity: 0;
+      z-index: -1;
    }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
    .test {
-      display: block;
       width: 100%;
-      background: var(--primary-color);
-      border-radius: 7px;
-      border-color: transparent;
    }
    .user {
       margin-top: 0.8rem;
@@ -394,42 +392,31 @@
       font-size: 0.75rem;
       color: var(--text-color);
    }
-   /* .options-container {
-      grid-template-columns: repeat(1, 1fr);
+   .options-container {
+      grid-template-columns: auto;
       row-gap: 0.8rem;
-   } */
+   }
    .status {
       font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--text-color);
    }
    .btn {
-      position: relative;
       min-height: 2.5rem;
       font-size: 0.65rem;
-      font-weight: 600;
-      background: var(--background-color);
-      cursor: pointer;
-      border: 3px solid var(--primary-color);
-      border-radius: 3px;
-      transition: 0.3s;
-      box-shadow: 1px 0px 5px var(--background-color),
-         0px 0px 10px var(--primary-color) inset, 0px 1px 5px rgb(82, 59, 59);
    }
    .btn-nav {
       width: 3.8rem;
       height: 2.2rem;
-      border-radius: 5px;
-      border-color: transparent;
-      background: var(--background-color);
-      color: var(--text-color);
-      padding: 0.2rem;
-      font-weight: 500;
-      font-size: 1.1rem;
-      cursor: pointer;
    }
    .question-heading {
       font-size: 0.8rem;
-      text-align: left;
+   }
+   .quiz-header {
+      margin-bottom: 0.3rem;
+   }
+   .question-status {
+      margin-bottom: 0.7rem;
+   }
+   .top {
+      margin-bottom: 0.2rem;
    }
 }
